@@ -45,7 +45,7 @@
 			<div class="grid__item" animate:flip={{ duration: 300 }}>
 				<ProductCard
 					flipped={cardFlipped}
-					onclick={() => goto(`#${product.id}`, { noScroll: true })}
+					onclick={() => goto(`#${product.id}`, { noScroll: true, replaceState: true })}
 					{...product}
 				/>
 				<Dialog

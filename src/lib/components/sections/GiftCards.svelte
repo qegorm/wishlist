@@ -29,13 +29,14 @@
 
 				<GiftCard
 					dimmed={cardDimmed}
-					onclick={() => goto(`#${giftCard.id}`, { noScroll: true })}
+					onclick={() => goto(`#${giftCard.id}`, { noScroll: true, replaceState: true })}
 					{...giftCard}
 				/>
 				<Dialog
 					item={giftCard}
 					bind:open={
-						() => page.url.hash.slice(1) === giftCard.id, () => goto('', { noScroll: true })
+						() => page.url.hash.slice(1) === giftCard.id,
+						() => goto('', { noScroll: true, replaceState: true })
 					}
 				>
 					{#snippet actions()}

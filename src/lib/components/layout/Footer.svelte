@@ -26,7 +26,9 @@
 
 <footer class="footer">
 	<div class="footer__start">
-		<img src="/images/logos/me.svg" alt="Мой логотип" width={90} height={28} />
+		<a href="https://egor.me" target="_blank" rel="noopener">
+			<img src="/images/logos/me.svg" alt="Мой логотип" width={90} height={28} />
+		</a>
 		<Text as="p" variant="caption" color="subtle">2025–2026</Text>
 	</div>
 	{#each footerLinks as footerLink}
