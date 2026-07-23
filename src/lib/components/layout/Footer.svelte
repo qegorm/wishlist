@@ -26,7 +26,7 @@
 
 <footer class="footer">
 	<div class="footer__start">
-		<a href="https://egor.me" target="_blank" rel="noopener">
+		<a href="https://egor.me" target="_blank" rel="noopener" class="footer__logo">
 			<img src="/images/logos/me.svg" alt="Мой логотип" width={90} height={28} />
 		</a>
 		<Text as="p" variant="caption" color="subtle">2025–2026</Text>
@@ -51,6 +51,11 @@
 
 		@media (max-width: 1024px) {
 			padding-block: 16px;
+		}
+
+		&__logo {
+			display: flex;
+			align-items: center;
 		}
 
 		&__start {
