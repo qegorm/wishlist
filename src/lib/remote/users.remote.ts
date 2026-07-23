@@ -1,12 +1,12 @@
 import { z } from 'zod'
 
-import { WISHLIST_KEY } from '$env/static/private'
+import { env } from '$env/dynamic/private'
 import { query } from '$app/server'
 import { db } from '$lib/server/db'
 import { users } from '$lib/server/db/schema'
 
 export const createUser = query(z.string().optional(), async (key) => {
-	if (key !== WISHLIST_KEY) {
+	if (key !== env.WISHLIST_KEY) {
 		throw new Error('Invalid key')
 	}
 
@@ -14,5 +14,5 @@ export const createUser = query(z.string().optional(), async (key) => {
 })
 
 export const validateUser = query(z.string().optional(), async (key) => {
-	return key === WISHLIST_KEY
+	return key === env.WISHLIST_KEY
 })
